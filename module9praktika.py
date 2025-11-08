@@ -37,7 +37,6 @@ class TaxiService:
         print(f"Такси вызвано для гостя: {guest_name}")
 
 
-# ФАСАД
 class HotelFacade:
     def __init__(self):
         self.booking = RoomBookingSystem()
@@ -150,7 +149,6 @@ class Department(OrganizationComponent):
 
 
 if __name__ == "__main__":
-    # --- ФАСАД ---
     hotel = HotelFacade()
     hotel.book_room_with_services("Иван Кличко", ["Пицца", "Кофе"])
     hotel.organize_event_with_rooms("IT Конференция", ["Анна", "Борян"], ["Проектор", "Микрофон"])
@@ -158,10 +156,7 @@ if __name__ == "__main__":
     hotel.clean_on_request(203)
     hotel.cancel_booking("Иван Кличко")
 
-    # --- КОМПОНОВЩИК ---
-    print("\n================================")
     print("    КОРПОРАТИВНАЯ СТРУКТУРА")
-    print("================================")
 
     e1 = Employee("Иван Кличко", "Менеджер", 120000)
     e2 = Employee("Анна Хилькевич", "Разработчик", 150000)
